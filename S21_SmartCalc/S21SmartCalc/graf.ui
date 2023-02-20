@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>graf</class>
+ <widget class="QMainWindow" name="graf">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>818</width>
+    <height>719</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);</string>
+  </property>
+  <widget class="QWidget" name="grafwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>640</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Apple Chancery</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ }</string>
+    </property>
+    <property name="text">
+     <string>Ось X min</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>638</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Apple Chancery</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ }</string>
+    </property>
+    <property name="text">
+     <string>Ось Y min</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Y_min_option">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>638</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+   border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+</string>
+    </property>
+    <property name="text">
+     <string>-5</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="X_min_option">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>640</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+   border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+</string>
+    </property>
+    <property name="text">
+     <string>-100</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Y_max_option">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>680</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+   border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+</string>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>680</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Apple Chancery</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ }</string>
+    </property>
+    <property name="text">
+     <string>Ось Y max</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="X_max_option">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>680</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+   border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+</string>
+    </property>
+    <property name="text">
+     <string>100</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>680</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Apple Chancery</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ }</string>
+    </property>
+    <property name="text">
+     <string>Ось X max</string>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>791</width>
+      <height>601</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>660</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Apple Chancery</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)</string>
+    </property>
+    <property name="text">
+     <string>STEP</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="step">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>660</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

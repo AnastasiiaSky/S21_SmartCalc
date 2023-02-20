@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>S21_CreditCalc</class>
+ <widget class="QMainWindow" name="S21_CreditCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>356</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>441</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_calculate">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>266</y>
+       <width>423</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>21</pointsize>
+       <italic>true</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> QPushButton {
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+     </property>
+     <property name="text">
+      <string>Calculate</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="credit_sum">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>7</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>50000000</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>65</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+
+</string>
+     </property>
+     <property name="text">
+      <string>Time of credit (months)</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="time">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>65</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+     </property>
+     <property name="maximum">
+      <number>250</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>123</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+
+</string>
+     </property>
+     <property name="text">
+      <string>Rate</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>181</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+
+</string>
+     </property>
+     <property name="text">
+      <string>Credit type </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>239</y>
+       <width>200</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+
+</string>
+     </property>
+     <property name="text">
+      <string>1 - annuity, 0 - differentiated</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="type">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>180</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+     </property>
+     <property name="maximum">
+      <number>1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rate">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>123</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>7</y>
+      <width>215</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Apple Chancery</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(220, 142, 155);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+
+</string>
+    </property>
+    <property name="text">
+     <string>Total amount of credit is</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>0</y>
+      <width>441</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>7</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ </string>
+     </property>
+     <property name="text">
+      <string>Final credit sum</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>65</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ </string>
+     </property>
+     <property name="text">
+      <string>Overpay</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>123</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ </string>
+     </property>
+     <property name="text">
+      <string>First pay</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="final_sum">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>7</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>181</y>
+       <width>215</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+    border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ 
+</string>
+     </property>
+     <property name="text">
+      <string>Last pay</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="overpay">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>65</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="First_pay">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>123</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Last_pay">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>181</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 5px;
+	color:rgb(87, 87, 87)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clean">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>266</y>
+       <width>423</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Apple Chancery</family>
+       <pointsize>21</pointsize>
+       <italic>true</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> QPushButton {
+     border: 1px solid #8f8f91;
+     border-radius: 5px;
+     background-color:rgb(255, 188, 173);
+     min-width: 3px;
+	color:rgb(87, 87, 87)
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+     </property>
+     <property name="text">
+      <string>Clean</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
